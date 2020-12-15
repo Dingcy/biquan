@@ -1,7 +1,8 @@
 import React from 'react'
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 
-import BasicLayout from '../BasicLayout'
+// import BasicLayout from '../BasicLayout'
+import Home from '../pages/Home'
 import UserLayout from '../UserLayout'
 
 // 按照 Layout 分组路由
@@ -14,7 +15,7 @@ export default () => {
         {/* <Redirect exact from='/' to='/home' /> */}
         <Redirect exact from='/user' to='/user/login' />
         <Route path="/user" component={UserLayout} />
-        <Route path="/" component={BasicLayout} />
+        <Route path="/" component={Home} />
       </Switch>
     </HashRouter>
   )
